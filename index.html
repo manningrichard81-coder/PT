@@ -1,64 +1,213 @@
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iron Protocol — Personal Training for Men | Port Macquarie</title>
+  <meta name="description" content="Structured coaching for men who need consistency, discipline, and results. 7-week transformation protocol. Port Macquarie, NSW.">
+  <meta property="og:title" content="Iron Protocol — Discipline. Consistency. Results.">
+  <meta property="og:description" content="Structured personal training for men ready to build discipline and transform their bodies. Port Macquarie, NSW.">
+  <meta property="og:type" content="website">
 
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
-  hanging-punctuation: first last;
-  scroll-padding-top: 5rem;
-}
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
 
-body {
-  min-height: 100dvh;
-  line-height: 1.6;
-  font-family: var(--font-body, sans-serif);
-  font-size: var(--text-base);
-  color: var(--color-text);
-  background-color: var(--color-bg);
-}
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
 
-img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
-ul[role="list"], ol[role="list"] { list-style: none; }
-input, button, textarea, select { font: inherit; color: inherit; }
-
-h1, h2, h3, h4, h5, h6 { text-wrap: balance; line-height: 1.15; }
-p, li, figcaption { text-wrap: pretty; max-width: 72ch; }
-
-::selection {
-  background: oklch(from var(--color-accent) l c h / 0.3);
-  color: var(--color-text);
-}
-
-:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 3px;
-  border-radius: 0.375rem;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Iron Protocol",
+    "description": "Personal training for men focused on building consistency, discipline, and physical transformation.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Port Macquarie",
+      "addressRegion": "NSW",
+      "addressCountry": "AU"
+    },
+    "priceRange": "$700",
+    "url": ""
   }
-}
+  </script>
+</head>
+<body>
 
-button { cursor: pointer; background: none; border: none; }
-table { border-collapse: collapse; width: 100%; }
+  <!-- SKIP LINK -->
+  <a href="#main" class="sr-only" style="position:fixed;top:0;left:0;z-index:200;background:var(--color-accent);color:#0f0f0f;padding:8px 16px;">Skip to content</a>
 
-a, button, [role="button"], [role="link"], input, textarea, select {
-  transition: color 180ms cubic-bezier(0.16, 1, 0.3, 1),
-              background 180ms cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
-}
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Iron Protocol — Home">
+        <svg class="logo-mark" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="2" y="4" width="28" height="3" rx="1" fill="currentColor"/>
+          <rect x="13" y="4" width="6" height="24" rx="1" fill="currentColor"/>
+          <rect x="2" y="25" width="28" height="3" rx="1" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">Iron Protocol</span>
+      </a>
 
-.sr-only {
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;
-}
+      <nav>
+        <ul class="nav-desktop" role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#philosophy">Method</a></li>
+          <li><a href="#package">Program</a></li>
+          <li><a href="#testimonials">Results</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-mobile" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#philosophy">Method</a></li>
+        <li><a href="#package">Program</a></li>
+        <li><a href="#testimonials">Results</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg">
+        <img src="./assets/hero-training.jpg" alt="Man training with battle ropes on a beach at dawn" width="1920" height="1071" loading="eager" fetchpriority="high">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-label">Personal Training — Port Macquarie</p>
+        <h1>Build the <em>discipline</em> your life demands</h1>
+        <p class="hero-desc">Structured coaching for men who are done with excuses. 7 weeks. Strength, nutrition, mindset. No shortcuts.</p>
+        <div class="hero-buttons">
+          <a href="#package" class="btn btn-primary">See the Program</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image fade-in fade-in-js">
+            <img src="./assets/coaching-session.jpg" alt="Personal trainer coaching a client through a barbell deadlift in a raw industrial gym" width="1920" height="1071" loading="lazy" decoding="async">
+          </div>
+          <div>
+            <p class="section-label">About</p>
+            <h2 class="section-title">Not another gym bro</h2>
+            <p class="section-desc" style="margin-bottom: var(--space-4);">
+              I'm a qualified personal trainer with a BSc in Sport &amp; Exercise Science and a Lean Six Sigma Black Belt. I've spent a decade managing complex programs that deliver measurable results — and now I apply that same rigour to men's fitness.
+            </p>
+            <p class="section-desc">
+              Based in Port Macquarie, I work with men who know something needs to change. Blokes who've lost consistency — in the gym, in their nutrition, in their routines. I don't do gimmicks. I build systems that stick.
+            </p>
+            <div class="about-stats fade-in fade-in-js">
+              <div>
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Years experience</div>
+              </div>
+              <div>
+                <div class="stat-number">BSc</div>
+                <div class="stat-label">Exercise Science</div>
+              </div>
+              <div>
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Results-driven</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- PHILOSOPHY -->
+    <section id="philosophy" class="section">
+      <div class="container">
+        <p class="section-label">The Method</p>
+        <h2 class="section-title">Three pillars. Zero compromise.</h2>
+        <p class="section-desc">Most men don't lack motivation. They lack a framework. Iron Protocol gives you one.</p>
+        <div class="philosophy-grid">
+          <div class="philosophy-card fade-in fade-in-js">
+            <div class="philosophy-number">01</div>
+            <h3>Strength</h3>
+            <p>Compound lifts. Progressive overload. Bench, deadlift, rows, chin-ups. We build real, functional strength — not mirror-muscle vanity. Your body becomes a machine.</p>
+          </div>
+          <div class="philosophy-card fade-in fade-in-js">
+            <div class="philosophy-number">02</div>
+            <h3>Nutrition</h3>
+            <p>No fad diets. Structured eating that supports recovery, kills inflammation, and fuels performance. We track macros, time meals, and build habits you can sustain for decades.</p>
+          </div>
+          <div class="philosophy-card fade-in fade-in-js">
+            <div class="philosophy-number">03</div>
+            <h3>Mindset</h3>
+            <p>Discipline is a muscle. We build morning routines, break comfort-zone patterns, and create accountability structures that carry over to every area of your life.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL BLEED IMAGE -->
+    <div class="fullbleed-image fade-in fade-in-js">
+      <img src="./assets/outdoor-strength.jpg" alt="Silhouette of a man doing chin-ups at a beach park during sunrise" width="1920" height="1071" loading="lazy" decoding="async">
+    </div>
+
+    <!-- PACKAGE -->
+    <section id="package" class="section package-section">
+      <div class="container">
+        <div class="package-header">
+          <p class="section-label">The Program</p>
+          <h2 class="section-title">7-Week Iron Protocol</h2>
+          <p class="section-desc">Seven structured phases designed to rewire your habits and rebuild your body. Everything you need — nothing you don't.</p>
+          <div class="package-price-row">
+            <span class="package-price">$700</span>
+            <span class="package-price-note">Complete 7-week package</span>
+          </div>
+        </div>
+
+        <div class="package-grid">
+          <div class="package-item fade-in fade-in-js">
+            <div class="package-item-number">Week 01</div>
+            <h3>Assessment &amp; Foundation</h3>
+            <p>Full body composition analysis, movement screening, goal setting, and baseline strength testing. We find where you are and map where you're going.</p>
+          </div>
+          <div class="package-item fade-in fade-in-js">
+            <div class="package-item-number">Week 02</div>
+            <h3>Movement Mechanics</h3>
+            <p>Drill the fundamentals — deadlift, squat, press, row. Perfect form before heavy load. Build the neural pathways that prevent injury and maximise output.</p>
+          </div>
+          <div class="package-item fade-in fade-in-js">
+            <div class="package-item-number">Week 03</div>
+            <h3>Nutrition Reset</h3>
+            <p>Strip back the processed rubbish. Build a structured eating framework — macro targets, meal timing, whole-food foundations. Your gut and your energy will thank you.</p>
+          </div>
+          <div class="package-item fade-in fade-in-js">
+            <div class="package-item-number">Week 04</div>
+            <h3>Progressive Loading</h3>
+            <p>Now we build. Structured progressive overload across compound movements. Volume, intensity, and recovery managed week by week. You'll feel the difference.</p>
+          </div>
+          <div class="package-item fade-in fade-in-js">
+            <div class="package-item-number">Week 05</div>
+            <h3>Metabolic Conditioning</h3>
+            <p>Beach runs, battle ropes, rowing intervals, ocean swims. We layer conditioning onto your strength base — building the engine, not just the chassis.</p>
+          </div>
+          <div class="package-item fade-in fade-in-js">
+            <div class="package-item-number">Week 06</div>
+            <h3>Recovery &amp; Resilience</h3>
+            <p>Cold exposure, sauna protocols, sleep optimisation, and stress management. The body rebuilds during rest — we make sure it does it right.</p>
+          </div>
+          <div class="package-item fade-in fade-in-js">
+            <div class="package-ite
