@@ -3,18 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iron Protocol — Personal Training for Men | Port Macquarie</title>
-  <meta name="description" content="Structured coaching for men who need consistency, discipline, and results. 7-week transformation protocol. Port Macquarie, NSW.">
-  <meta property="og:title" content="Iron Protocol — Discipline. Consistency. Results.">
-  <meta property="og:description" content="Structured personal training for men ready to build discipline and transform their bodies. Port Macquarie, NSW.">
+  <title>Iron Protocol — 4-Week Health &amp; Fitness Reset for Men | Port Macquarie</title>
+  <meta name="description" content="A no-bullshit 4-week health and fitness reset for men who need to get back on track. Strength, nutrition, mindset. Port Macquarie, NSW.">
+  <meta property="og:title" content="Iron Protocol — The 4-Week Hard Reset">
+  <meta property="og:description" content="A no-bullshit 4-week health and fitness reset for men. You lift, you move, you eat right, you tick off the days. Port Macquarie, NSW.">
   <meta property="og:type" content="website">
-
   <!-- Fonts -->
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
-
   <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
@@ -26,7 +23,6 @@ html {
   hanging-punctuation: first last;
   scroll-padding-top: 5rem;
 }
-
 body {
   min-height: 100dvh;
   line-height: 1.6;
@@ -35,25 +31,20 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
 }
-
 img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
 ul[role="list"], ol[role="list"] { list-style: none; }
 input, button, textarea, select { font: inherit; color: inherit; }
-
 h1, h2, h3, h4, h5, h6 { text-wrap: balance; line-height: 1.15; }
 p, li, figcaption { text-wrap: pretty; max-width: 72ch; }
-
 ::selection {
   background: oklch(from var(--color-accent) l c h / 0.3);
   color: var(--color-text);
 }
-
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
   border-radius: 0.375rem;
 }
-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -62,24 +53,19 @@ p, li, figcaption { text-wrap: pretty; max-width: 72ch; }
     scroll-behavior: auto !important;
   }
 }
-
 button { cursor: pointer; background: none; border: none; }
 table { border-collapse: collapse; width: 100%; }
-
 a, button, [role="button"], [role="link"], input, textarea, select {
   transition: color 180ms cubic-bezier(0.16, 1, 0.3, 1),
               background 180ms cubic-bezier(0.16, 1, 0.3, 1),
               border-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;
 }
-
 /* ===== IRON PROTOCOL — Design Tokens ===== */
-
 :root {
   /* Type Scale */
   --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
@@ -90,7 +76,6 @@ a, button, [role="button"], [role="link"], input, textarea, select {
   --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
   --text-3xl:  clamp(2.5rem,   1rem    + 4vw,    5rem);
   --text-hero: clamp(3rem,     0.5rem  + 7vw,    7rem);
-
   /* 4px spacing */
   --space-1:  0.25rem;
   --space-2:  0.5rem;
@@ -105,11 +90,9 @@ a, button, [role="button"], [role="link"], input, textarea, select {
   --space-20: 5rem;
   --space-24: 6rem;
   --space-32: 8rem;
-
   /* Fonts */
   --font-display: 'Cabinet Grotesk', 'Arial Black', sans-serif;
   --font-body: 'Satoshi', 'Inter', sans-serif;
-
   /* Dark palette — charcoal + amber */
   --color-bg:           #0f0f0f;
   --color-surface:      #171717;
@@ -125,35 +108,28 @@ a, button, [role="button"], [role="link"], input, textarea, select {
   --color-accent-dark:  #a07228;
   --color-error:        #d14b4b;
   --color-success:      #5fa84a;
-
   /* Radius */
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
-
   /* Shadows */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.6);
-
   /* Content widths */
   --content-narrow: 640px;
   --content-default: 960px;
   --content-wide: 1200px;
-
   /* Transitions */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 /* ===== Global ===== */
-
 body {
   font-family: var(--font-body);
   background: var(--color-bg);
   color: var(--color-text);
 }
-
 a {
   color: var(--color-accent);
   text-decoration: none;
@@ -161,19 +137,15 @@ a {
 a:hover {
   color: var(--color-accent-hover);
 }
-
 .container {
   max-width: var(--content-wide);
   margin-inline: auto;
   padding-inline: var(--space-4);
 }
-
 @media (min-width: 768px) {
   .container { padding-inline: var(--space-8); }
 }
-
 /* ===== HEADER ===== */
-
 .site-header {
   position: fixed;
   top: 0;
@@ -186,7 +158,6 @@ a:hover {
   border-bottom: 1px solid var(--color-border);
   transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
 }
-
 .header-inner {
   display: flex;
   align-items: center;
@@ -195,11 +166,9 @@ a:hover {
   max-width: var(--content-wide);
   margin-inline: auto;
 }
-
 @media (min-width: 768px) {
   .header-inner { padding-inline: var(--space-8); }
 }
-
 .logo {
   display: flex;
   align-items: center;
@@ -207,11 +176,9 @@ a:hover {
   text-decoration: none;
   color: var(--color-text);
 }
-
 .logo-mark {
   color: var(--color-accent);
 }
-
 .logo-text {
   font-family: var(--font-display);
   font-weight: 800;
@@ -220,13 +187,11 @@ a:hover {
   text-transform: uppercase;
   color: var(--color-text);
 }
-
 .nav-desktop {
   display: none;
   gap: var(--space-6);
   list-style: none;
 }
-
 .nav-desktop a {
   font-family: var(--font-body);
   font-size: var(--text-sm);
@@ -237,15 +202,12 @@ a:hover {
   letter-spacing: 0.08em;
   transition: color var(--transition-interactive);
 }
-
 .nav-desktop a:hover {
   color: var(--color-accent);
 }
-
 @media (min-width: 768px) {
   .nav-desktop { display: flex; }
 }
-
 /* Mobile hamburger */
 .nav-toggle {
   display: flex;
@@ -257,7 +219,6 @@ a:hover {
   background: none;
   border: none;
 }
-
 .nav-toggle span {
   display: block;
   height: 2px;
@@ -265,7 +226,6 @@ a:hover {
   border-radius: 1px;
   transition: transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out);
 }
-
 .nav-toggle.active span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -275,11 +235,9 @@ a:hover {
 .nav-toggle.active span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
-
 @media (min-width: 768px) {
   .nav-toggle { display: none; }
 }
-
 /* Mobile nav overlay */
 .nav-mobile {
   position: fixed;
@@ -299,12 +257,10 @@ a:hover {
   transition: opacity 0.3s var(--ease-out);
   z-index: 99;
 }
-
 .nav-mobile.open {
   opacity: 1;
   pointer-events: auto;
 }
-
 .nav-mobile a {
   font-family: var(--font-display);
   font-size: var(--text-xl);
@@ -315,13 +271,10 @@ a:hover {
   letter-spacing: 0.1em;
   transition: color var(--transition-interactive);
 }
-
 .nav-mobile a:hover {
   color: var(--color-accent);
 }
-
 /* ===== HERO ===== */
-
 .hero {
   position: relative;
   min-height: 100dvh;
@@ -329,20 +282,17 @@ a:hover {
   align-items: flex-end;
   overflow: hidden;
 }
-
 .hero-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
 }
-
 .hero-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
 }
-
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -354,7 +304,6 @@ a:hover {
     rgba(15, 15, 15, 0.3) 100%
   );
 }
-
 .hero-content {
   position: relative;
   z-index: 1;
@@ -363,11 +312,9 @@ a:hover {
   margin-inline: auto;
   width: 100%;
 }
-
 @media (min-width: 768px) {
   .hero-content { padding: var(--space-24) var(--space-8) var(--space-16); }
 }
-
 .hero-label {
   font-family: var(--font-body);
   font-size: var(--text-xs);
@@ -377,7 +324,6 @@ a:hover {
   color: var(--color-accent);
   margin-bottom: var(--space-4);
 }
-
 .hero h1 {
   font-family: var(--font-display);
   font-size: var(--text-hero);
@@ -388,22 +334,18 @@ a:hover {
   margin-bottom: var(--space-6);
   max-width: 14ch;
 }
-
 .hero h1 em {
   font-style: normal;
   color: var(--color-accent);
 }
-
 .hero-desc {
   font-size: var(--text-base);
   color: var(--color-text-muted);
-  max-width: 42ch;
+  max-width: 44ch;
   margin-bottom: var(--space-8);
   line-height: 1.7;
 }
-
 /* ===== BUTTONS ===== */
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -423,49 +365,39 @@ a:hover {
               transform var(--transition-interactive),
               box-shadow var(--transition-interactive);
 }
-
 .btn:hover {
   transform: translateY(-1px);
 }
-
 .btn:active {
   transform: translateY(0);
 }
-
 .btn-primary {
   background: var(--color-accent);
   color: #0f0f0f;
   border: none;
 }
-
 .btn-primary:hover {
   background: var(--color-accent-hover);
   box-shadow: 0 4px 20px rgba(200, 146, 58, 0.3);
 }
-
 .btn-outline {
   background: transparent;
   color: var(--color-text);
   border: 1px solid var(--color-border-strong);
 }
-
 .btn-outline:hover {
   border-color: var(--color-accent);
   color: var(--color-accent);
 }
-
 .hero-buttons {
   display: flex;
   gap: var(--space-4);
   flex-wrap: wrap;
 }
-
 /* ===== SECTION UTILITIES ===== */
-
 .section {
   padding-block: clamp(var(--space-12), 8vw, var(--space-24));
 }
-
 .section-label {
   font-family: var(--font-body);
   font-size: var(--text-xs);
@@ -475,7 +407,6 @@ a:hover {
   color: var(--color-accent);
   margin-bottom: var(--space-3);
 }
-
 .section-title {
   font-family: var(--font-display);
   font-size: var(--text-2xl);
@@ -484,14 +415,12 @@ a:hover {
   line-height: 1.05;
   margin-bottom: var(--space-4);
 }
-
 .section-desc {
   font-size: var(--text-base);
   color: var(--color-text-muted);
   max-width: 52ch;
   line-height: 1.7;
 }
-
 /* Divider */
 .section-divider {
   border: none;
@@ -499,34 +428,28 @@ a:hover {
   background: var(--color-border);
   margin: 0;
 }
-
 /* ===== ABOUT ===== */
-
 .about-grid {
   display: grid;
   gap: var(--space-8);
   align-items: center;
 }
-
 @media (min-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-12);
   }
 }
-
 .about-image {
   border-radius: var(--radius-md);
   overflow: hidden;
   aspect-ratio: 4 / 3;
 }
-
 .about-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .about-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -535,7 +458,6 @@ a:hover {
   padding-top: var(--space-6);
   border-top: 1px solid var(--color-border);
 }
-
 .stat-number {
   font-family: var(--font-display);
   font-size: var(--text-xl);
@@ -544,35 +466,29 @@ a:hover {
   line-height: 1;
   margin-bottom: var(--space-1);
 }
-
 .stat-label {
   font-size: var(--text-xs);
   color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-
 /* ===== PHILOSOPHY ===== */
-
 .philosophy-grid {
   display: grid;
   gap: var(--space-6);
   margin-top: var(--space-10);
 }
-
 @media (min-width: 768px) {
   .philosophy-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 .philosophy-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-6);
 }
-
 .philosophy-number {
   font-family: var(--font-display);
   font-size: var(--text-3xl);
@@ -581,7 +497,6 @@ a:hover {
   line-height: 1;
   margin-bottom: var(--space-3);
 }
-
 .philosophy-card h3 {
   font-family: var(--font-display);
   font-size: var(--text-lg);
@@ -589,46 +504,37 @@ a:hover {
   text-transform: uppercase;
   margin-bottom: var(--space-3);
 }
-
 .philosophy-card p {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   line-height: 1.7;
 }
-
 /* ===== FULL-BLEED IMAGE ===== */
-
 .fullbleed-image {
   width: 100%;
   height: clamp(250px, 40vw, 500px);
   overflow: hidden;
 }
-
 .fullbleed-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 40%;
 }
-
 /* ===== PACKAGE ===== */
-
 .package-section {
   background: var(--color-surface);
 }
-
 .package-header {
   text-align: left;
   margin-bottom: var(--space-10);
 }
-
 .package-price-row {
   display: flex;
   align-items: baseline;
   gap: var(--space-3);
   margin-top: var(--space-4);
 }
-
 .package-price {
   font-family: var(--font-display);
   font-size: var(--text-2xl);
@@ -636,25 +542,20 @@ a:hover {
   color: var(--color-accent);
   line-height: 1;
 }
-
 .package-price-note {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
 }
-
 .package-grid {
   display: grid;
   gap: var(--space-4);
 }
-
 @media (min-width: 640px) {
   .package-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (min-width: 1024px) {
   .package-grid { grid-template-columns: repeat(4, 1fr); }
 }
-
 .package-item {
   background: var(--color-bg);
   border: 1px solid var(--color-border);
@@ -662,11 +563,9 @@ a:hover {
   padding: var(--space-5);
   transition: border-color var(--transition-interactive);
 }
-
 .package-item:hover {
   border-color: var(--color-accent);
 }
-
 .package-item-number {
   font-family: var(--font-display);
   font-size: var(--text-xs);
@@ -676,7 +575,6 @@ a:hover {
   letter-spacing: 0.15em;
   margin-bottom: var(--space-2);
 }
-
 .package-item h3 {
   font-family: var(--font-display);
   font-size: var(--text-lg);
@@ -685,13 +583,11 @@ a:hover {
   margin-bottom: var(--space-2);
   line-height: 1.2;
 }
-
 .package-item p {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   line-height: 1.6;
 }
-
 .package-cta {
   margin-top: var(--space-10);
   display: flex;
@@ -699,28 +595,22 @@ a:hover {
   gap: var(--space-3);
   align-items: flex-start;
 }
-
 .package-cta-note {
   font-size: var(--text-xs);
   color: var(--color-text-faint);
 }
-
 /* ===== TESTIMONIALS ===== */
-
 .testimonial-grid {
   display: grid;
   gap: var(--space-6);
   margin-top: var(--space-10);
 }
-
 @media (min-width: 768px) {
   .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (min-width: 1024px) {
   .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
 }
-
 .testimonial-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -729,7 +619,6 @@ a:hover {
   display: flex;
   flex-direction: column;
 }
-
 .testimonial-quote {
   font-size: var(--text-base);
   color: var(--color-text-muted);
@@ -738,7 +627,6 @@ a:hover {
   flex: 1;
   margin-bottom: var(--space-6);
 }
-
 .testimonial-quote::before {
   content: "\201C";
   font-family: var(--font-display);
@@ -748,7 +636,6 @@ a:hover {
   line-height: 0.8;
   margin-bottom: var(--space-2);
 }
-
 .testimonial-author {
   display: flex;
   align-items: center;
@@ -756,7 +643,6 @@ a:hover {
   padding-top: var(--space-4);
   border-top: 1px solid var(--color-border);
 }
-
 .testimonial-avatar {
   width: 40px;
   height: 40px;
@@ -771,48 +657,39 @@ a:hover {
   color: var(--color-accent);
   flex-shrink: 0;
 }
-
 .testimonial-name {
   font-weight: 600;
   font-size: var(--text-sm);
 }
-
 .testimonial-detail {
   font-size: var(--text-xs);
   color: var(--color-text-faint);
 }
-
 /* ===== CONTACT ===== */
-
 .contact-section {
   background: var(--color-surface);
 }
-
 .contact-grid {
   display: grid;
   gap: var(--space-8);
 }
-
 @media (min-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-12);
   }
 }
-
 .contact-info p {
   font-size: var(--text-base);
   color: var(--color-text-muted);
   line-height: 1.7;
   margin-bottom: var(--space-6);
 }
-
 .contact-details {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
 }
-
 .contact-detail-item {
   display: flex;
   align-items: center;
@@ -820,18 +697,15 @@ a:hover {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
 }
-
 .contact-detail-item svg {
   width: 20px;
   height: 20px;
   color: var(--color-accent);
   flex-shrink: 0;
 }
-
 .form-group {
   margin-bottom: var(--space-4);
 }
-
 .form-group label {
   display: block;
   font-size: var(--text-xs);
@@ -841,7 +715,6 @@ a:hover {
   color: var(--color-text-muted);
   margin-bottom: var(--space-2);
 }
-
 .form-group input,
 .form-group textarea,
 .form-group select {
@@ -854,55 +727,55 @@ a:hover {
   color: var(--color-text);
   transition: border-color var(--transition-interactive);
 }
-
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--color-text-faint);
 }
-
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
   outline: none;
   border-color: var(--color-accent);
 }
-
 .form-group textarea {
   resize: vertical;
   min-height: 120px;
 }
-
 .form-row {
   display: grid;
   gap: var(--space-4);
 }
-
 @media (min-width: 480px) {
   .form-row { grid-template-columns: 1fr 1fr; }
 }
-
-.form-success {
+.form-honeypot {
+  position: absolute;
+  left: -5000px;
+}
+.form-status {
   display: none;
   padding: var(--space-4);
-  background: rgba(95, 168, 74, 0.1);
-  border: 1px solid rgba(95, 168, 74, 0.3);
   border-radius: var(--radius-md);
-  color: var(--color-success);
   font-size: var(--text-sm);
   text-align: center;
+  margin-top: var(--space-4);
 }
-
-.form-success.show {
-  display: block;
+.form-status.show { display: block; }
+.form-status.success {
+  background: rgba(95, 168, 74, 0.1);
+  border: 1px solid rgba(95, 168, 74, 0.3);
+  color: var(--color-success);
 }
-
+.form-status.error {
+  background: rgba(209, 75, 75, 0.1);
+  border: 1px solid rgba(209, 75, 75, 0.3);
+  color: var(--color-error);
+}
 /* ===== FOOTER ===== */
-
 .site-footer {
   padding: var(--space-10) 0;
   border-top: 1px solid var(--color-border);
 }
-
 .footer-inner {
   display: flex;
   flex-direction: column;
@@ -910,7 +783,6 @@ a:hover {
   align-items: center;
   text-align: center;
 }
-
 @media (min-width: 768px) {
   .footer-inner {
     flex-direction: row;
@@ -918,35 +790,28 @@ a:hover {
     text-align: left;
   }
 }
-
 .footer-copy {
   font-size: var(--text-xs);
   color: var(--color-text-faint);
 }
-
 .footer-links {
   display: flex;
   gap: var(--space-4);
   list-style: none;
 }
-
 .footer-links a {
   font-size: var(--text-xs);
   color: var(--color-text-muted);
   text-decoration: none;
   transition: color var(--transition-interactive);
 }
-
 .footer-links a:hover {
   color: var(--color-accent);
 }
-
 /* ===== SCROLL REVEAL ===== */
-
 .fade-in {
   opacity: 1;
 }
-
 @supports (animation-timeline: scroll()) {
   .fade-in {
     opacity: 0;
@@ -955,46 +820,39 @@ a:hover {
     animation-range: entry 0% entry 100%;
   }
 }
-
 @keyframes reveal-fade {
   to { opacity: 1; }
 }
-
 /* JS fallback for scroll reveal in browsers without scroll-driven */
 .fade-in-js {
   opacity: 0;
   transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .fade-in-js.visible {
   opacity: 1;
 }
-
   </style>
-
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Iron Protocol",
-    "description": "Personal training for men focused on building consistency, discipline, and physical transformation.",
+    "description": "A no-bullshit 4-week health and fitness reset for men — strength, nutrition, and mindset for those who need to get back on track.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Port Macquarie",
       "addressRegion": "NSW",
       "addressCountry": "AU"
     },
-    "priceRange": "$700",
+    "priceRange": "$400",
     "url": ""
   }
   </script>
 </head>
 <body>
-
   <!-- SKIP LINK -->
   <a href="#main" class="sr-only" style="position:fixed;top:0;left:0;z-index:200;background:var(--color-accent);color:#0f0f0f;padding:8px 16px;">Skip to content</a>
-
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
@@ -1006,7 +864,6 @@ a:hover {
         </svg>
         <span class="logo-text">Iron Protocol</span>
       </a>
-
       <nav>
         <ul class="nav-desktop" role="list">
           <li><a href="#about">About</a></li>
@@ -1016,13 +873,11 @@ a:hover {
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
-
       <ul class="nav-mobile" role="list">
         <li><a href="#about">About</a></li>
         <li><a href="#philosophy">Method</a></li>
@@ -1032,10 +887,8 @@ a:hover {
       </ul>
     </div>
   </header>
-
   <!-- MAIN -->
   <main id="main">
-
     <!-- HERO -->
     <section class="hero" aria-label="Hero">
       <div class="hero-bg">
@@ -1043,16 +896,15 @@ a:hover {
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-content">
-        <p class="hero-label">Personal Training — Port Macquarie</p>
-        <h1>Build the <em>discipline</em> your life demands</h1>
-        <p class="hero-desc">Structured coaching for men who are done with excuses. 7 weeks. Strength, nutrition, mindset. No shortcuts.</p>
+        <p class="hero-label">Health &amp; Fitness Reset — Port Macquarie</p>
+        <h1>The 4-week <em>hard reset</em></h1>
+        <p class="hero-desc">A no-bullshit reset for men who need to get back on track. Four weeks. Strength, nutrition, mindset. You lift, you move, you eat right, and you tick off the days.</p>
         <div class="hero-buttons">
           <a href="#package" class="btn btn-primary">See the Program</a>
           <a href="#contact" class="btn btn-outline">Get in Touch</a>
         </div>
       </div>
     </section>
-
     <!-- ABOUT -->
     <section id="about" class="section">
       <div class="container">
@@ -1064,15 +916,15 @@ a:hover {
             <p class="section-label">About</p>
             <h2 class="section-title">Not another gym bro</h2>
             <p class="section-desc" style="margin-bottom: var(--space-4);">
-              With a BSc in Sport & Exercise Science and shaped by years of powerlifting, semi-professional football, competative marathons, and surf lifesaving. I bring real-world athletic grit to help men move better, build strength, and push their limits.
+              With a BSc in Sport &amp; Exercise Science and shaped by years of powerlifting, semi-professional football, competitive marathons, and surf lifesaving, I bring real-world athletic grit to help men move better, build strength, and push their limits.
             </p>
             <p class="section-desc">
-              Based in Port Macquarie, I work with men who know something needs to change. Blokes who've lost consistency — in the gym, in their nutrition, in their routines. I don't do gimmicks. I build systems that stick.
+              Based in Port Macquarie, I work with men who know something needs to change. Blokes who've fallen off the wagon — in the gym, in their nutrition, in their routines. I don't do gimmicks. I run a hard reset and I build systems that stick.
             </p>
             <div class="about-stats fade-in fade-in-js">
               <div>
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Years experience</div>
+                <div class="stat-number">4</div>
+                <div class="stat-label">Week reset</div>
               </div>
               <div>
                 <div class="stat-number">BSc</div>
@@ -1080,118 +932,94 @@ a:hover {
               </div>
               <div>
                 <div class="stat-number">100%</div>
-                <div class="stat-label">Results-driven</div>
+                <div class="stat-label">No bullshit</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <hr class="section-divider">
-
     <!-- PHILOSOPHY -->
     <section id="philosophy" class="section">
       <div class="container">
         <p class="section-label">The Method</p>
         <h2 class="section-title">Three pillars. Zero compromise.</h2>
-        <p class="section-desc">Most men don't lack motivation. They lack a framework. Iron Protocol gives you one.</p>
+        <p class="section-desc">Most men don't lack motivation. Sometimes they just fall off the wagon and need help regaining their footing. Iron Protocol drags you back on.</p>
         <div class="philosophy-grid">
           <div class="philosophy-card fade-in fade-in-js">
             <div class="philosophy-number">01</div>
             <h3>Strength</h3>
-            <p>Compound lifts. Progressive overload. Bench, deadlift, rows, chin-ups. We build real, functional strength — not mirror-muscle vanity. Your body becomes a machine.</p>
+            <p>You lift and you move. Compound lifts, progressive overload, conditioning that hurts. We build real, functional strength — not mirror-muscle vanity. Show up and put in the work.</p>
           </div>
           <div class="philosophy-card fade-in fade-in-js">
             <div class="philosophy-number">02</div>
             <h3>Nutrition</h3>
-            <p>No fad diets. Structured eating that supports recovery, kills inflammation, and fuels performance. We track macros, time meals, and build habits you can sustain for decades.</p>
+            <p>You sign up to our meal times and meal plans. No fad diets, no guesswork. Structured eating that kills inflammation, fuels recovery, and rebuilds habits you can actually keep.</p>
           </div>
           <div class="philosophy-card fade-in fade-in-js">
             <div class="philosophy-number">03</div>
             <h3>Mindset</h3>
-            <p>Discipline is a muscle. We build morning routines, break comfort-zone patterns, and create accountability structures that carry over to every area of your life.</p>
+            <p>You do hard shit and you tick off the days. Discipline is a muscle. Four weeks of accountability, comfort-zone breaking, and small wins that stack into a system for life.</p>
           </div>
         </div>
       </div>
     </section>
-
     <!-- FULL BLEED IMAGE -->
     <div class="fullbleed-image fade-in fade-in-js">
       <img src="./assets/outdoor-strength.jpg" alt="Silhouette of a man doing chin-ups at a beach park during sunrise" width="1920" height="1071" loading="lazy" decoding="async">
     </div>
-
     <!-- PACKAGE -->
     <section id="package" class="section package-section">
       <div class="container">
         <div class="package-header">
           <p class="section-label">The Program</p>
-          <h2 class="section-title">7-Week Iron Protocol</h2>
-          <p class="section-desc">Seven structured phases designed to rewire your habits and rebuild your body. Everything you need — nothing you don't.</p>
+          <h2 class="section-title">4-Week Iron Protocol</h2>
+          <p class="section-desc">Four structured weeks built to rewire your habits and rebuild your body. Expect to get uncomfortable. Everything you need — nothing you don't.</p>
           <div class="package-price-row">
-            <span class="package-price">$700</span>
-            <span class="package-price-note">Complete 7-week package</span>
+            <span class="package-price">$400</span>
+            <span class="package-price-note">Complete 4-week package</span>
           </div>
         </div>
-
         <div class="package-grid">
           <div class="package-item fade-in fade-in-js">
             <div class="package-item-number">Week 01</div>
-            <h3>Assessment &amp; Foundation</h3>
-            <p>Full body composition analysis, movement screening, goal setting, and baseline strength testing. We find where you are and map where you're going.</p>
+            <h3>Assessment &amp; Reset</h3>
+            <p>Body composition, movement screening, and baseline strength testing. We lock in your meal times, your training template, and the daily targets you'll tick off from day one.</p>
           </div>
           <div class="package-item fade-in fade-in-js">
             <div class="package-item-number">Week 02</div>
-            <h3>Movement Mechanics</h3>
-            <p>Drill the fundamentals — deadlift, squat, press, row. Perfect form before heavy load. Build the neural pathways that prevent injury and maximise output.</p>
+            <h3>Move &amp; Fuel</h3>
+            <p>Drill the fundamentals — deadlift, squat, press, row. Strip back the processed rubbish and settle into the meal plan. Form before load, discipline before intensity.</p>
           </div>
           <div class="package-item fade-in fade-in-js">
             <div class="package-item-number">Week 03</div>
-            <h3>Nutrition Reset</h3>
-            <p>Strip back the processed rubbish. Build a structured eating framework — macro targets, meal timing, whole-food foundations. Your gut and your energy will thank you.</p>
+            <h3>Load &amp; Discomfort</h3>
+            <p>Now it gets hard. Progressive overload, beach runs, battle ropes, ocean swims. This is the week you learn what you're actually made of. No excuses, no wagon to fall off.</p>
           </div>
           <div class="package-item fade-in fade-in-js">
             <div class="package-item-number">Week 04</div>
-            <h3>Progressive Loading</h3>
-            <p>Now we build. Structured progressive overload across compound movements. Volume, intensity, and recovery managed week by week. You'll feel the difference.</p>
-          </div>
-          <div class="package-item fade-in fade-in-js">
-            <div class="package-item-number">Week 05</div>
-            <h3>Metabolic Conditioning</h3>
-            <p>Beach runs, battle ropes, rowing intervals, ocean swims. We layer conditioning onto your strength base — building the engine, not just the chassis.</p>
-          </div>
-          <div class="package-item fade-in fade-in-js">
-            <div class="package-item-number">Week 06</div>
-            <h3>Recovery &amp; Resilience</h3>
-            <p>Cold exposure, sauna protocols, sleep optimisation, and stress management. The body rebuilds during rest — we make sure it does it right.</p>
-          </div>
-          <div class="package-item fade-in fade-in-js">
-            <div class="package-item-number">Week 07</div>
             <h3>Integration &amp; Independence</h3>
-            <p>Lock in your weekly template. Test your benchmarks. Walk away with a system you own — training, nutrition, recovery, and accountability for life.</p>
+            <p>Lock in your weekly template. Retest your benchmarks. Walk away with a system you own — training, nutrition, recovery, and accountability you can run on your own.</p>
           </div>
         </div>
-
         <div class="package-cta">
-          <a href="#contact" class="btn btn-primary">Enquire Now — Start Your Protocol</a>
+          <a href="#contact" class="btn btn-primary">Enquire Now — Start Your Reset</a>
           <span class="package-cta-note">Limited spots available. Applications reviewed individually.</span>
         </div>
       </div>
     </section>
-
     <hr class="section-divider">
-
     <!-- TESTIMONIALS -->
     <section id="testimonials" class="section">
       <div class="container">
         <p class="section-label">Results</p>
         <h2 class="section-title">Men who showed up</h2>
-        <p class="section-desc">Real blokes. Real transformations. No filters.</p>
-
+        <p class="section-desc">Real blokes. Real resets. No filters.</p>
         <div class="testimonial-grid">
           <div class="testimonial-card fade-in fade-in-js">
             <div class="testimonial-quote">
-              I hadn't trained properly in 8 years. Two kids, desk job, the usual excuses. Iron Protocol gave me a framework I could actually follow. Down 12kg, bench pressing more than I did at 25.
+              I hadn't trained properly in 8 years. Two kids, desk job, the usual excuses. Four weeks of Iron Protocol got me off the wagon and back into a routine I could actually follow. Best reset I've done.
             </div>
             <div class="testimonial-author">
               <div class="testimonial-avatar">MC</div>
@@ -1201,10 +1029,9 @@ a:hover {
               </div>
             </div>
           </div>
-
           <div class="testimonial-card fade-in fade-in-js">
             <div class="testimonial-quote">
-              The nutrition piece was the game-changer. I was eating like a teenager and wondering why I felt like garbage. Now I meal prep, track my macros, and my energy is through the roof.
+              The meal plan was the game-changer. I was eating like a teenager and wondering why I felt like garbage. Signed up to the meal times, ticked off the days, and my energy is through the roof.
             </div>
             <div class="testimonial-author">
               <div class="testimonial-avatar">DS</div>
@@ -1214,10 +1041,9 @@ a:hover {
               </div>
             </div>
           </div>
-
           <div class="testimonial-card fade-in fade-in-js">
             <div class="testimonial-quote">
-              I was sceptical about paying upfront for 7 weeks. By week 3, I knew it was the best investment I'd made in years. The accountability alone is worth it. My wife noticed the change before I did.
+              I was sceptical about a 4-week hard reset. By the end of week 2, I knew it was the best investment I'd made in years. The accountability alone is worth it. My wife noticed the change before I did.
             </div>
             <div class="testimonial-author">
               <div class="testimonial-avatar">JW</div>
@@ -1230,7 +1056,6 @@ a:hover {
         </div>
       </div>
     </section>
-
     <!-- CONTACT -->
     <section id="contact" class="section contact-section">
       <div class="container">
@@ -1238,15 +1063,11 @@ a:hover {
           <div class="contact-info">
             <p class="section-label">Get Started</p>
             <h2 class="section-title">Ready to<br>commit?</h2>
-            <p>Fill out the form and I'll be in touch within 24 hours. Every application is reviewed personally — this isn't a gym membership, it's a commitment to change.</p>
+            <p>Fill out the form and I'll be in touch within 24 hours. Every application is reviewed personally — this isn't a gym membership, it's a four-week commitment to change.</p>
             <div class="contact-details">
               <div class="contact-detail-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 <span>Port Macquarie, NSW, Australia</span>
-              </div>
-              <div class="contact-detail-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                <span>enquiry@ironprotocol.com.au</span>
               </div>
               <div class="contact-detail-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
@@ -1254,54 +1075,56 @@ a:hover {
               </div>
             </div>
           </div>
-
           <div>
-            <form id="contact-form" action="#" onsubmit="return handleSubmit(event)">
+            <form id="contact-form" action="https://formsubmit.co/ajax/manningrichard81@gmail.com" method="POST">
+              <!-- Honeypot spam trap -->
+              <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <!-- FormSubmit config -->
+              <input type="hidden" name="_subject" value="New Iron Protocol enquiry">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
               <div class="form-row">
                 <div class="form-group">
                   <label for="first-name">First Name</label>
-                  <input type="text" id="first-name" name="first-name" placeholder="John" required>
+                  <input type="text" id="first-name" name="First Name" placeholder="John" required>
                 </div>
                 <div class="form-group">
                   <label for="last-name">Last Name</label>
-                  <input type="text" id="last-name" name="last-name" placeholder="Smith" required>
+                  <input type="text" id="last-name" name="Last Name" placeholder="Smith" required>
                 </div>
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                <input type="email" id="email" name="Email" placeholder="john@example.com" required>
               </div>
               <div class="form-group">
                 <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="04XX XXX XXX">
+                <input type="tel" id="phone" name="Phone" placeholder="04XX XXX XXX">
               </div>
               <div class="form-group">
                 <label for="goal">What's your main goal?</label>
-                <select id="goal" name="goal" required>
+                <select id="goal" name="Main Goal" required>
                   <option value="" disabled selected>Select one</option>
-                  <option value="fat-loss">Lose fat & build muscle</option>
-                  <option value="strength">Get stronger</option>
-                  <option value="consistency">Build consistency & discipline</option>
-                  <option value="health">Improve overall health</option>
-                  <option value="other">Other</option>
+                  <option value="Reset — get back on track">Get back on track (hard reset)</option>
+                  <option value="Lose fat &amp; build muscle">Lose fat &amp; build muscle</option>
+                  <option value="Get stronger">Get stronger</option>
+                  <option value="Build consistency &amp; discipline">Build consistency &amp; discipline</option>
+                  <option value="Improve overall health">Improve overall health</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
               <div class="form-group">
                 <label for="message">Tell me about your situation</label>
-                <textarea id="message" name="message" placeholder="Where you're at now, what's not working, what you want to change..." rows="5"></textarea>
+                <textarea id="message" name="Message" placeholder="Where you're at now, what's not working, what you want to change..." rows="5"></textarea>
               </div>
               <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application</button>
-              <div id="form-success" class="form-success">
-                Application received. I'll review your details and be in touch within 24 hours.
-              </div>
+              <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
             </form>
           </div>
         </div>
       </div>
     </section>
-
   </main>
-
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
@@ -1325,19 +1148,16 @@ a:hover {
       </div>
     </div>
   </footer>
-
   <script defer>
     // Mobile nav toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navMobile = document.querySelector('.nav-mobile');
-
     navToggle.addEventListener('click', () => {
       const isOpen = navMobile.classList.toggle('open');
       navToggle.classList.toggle('active');
       navToggle.setAttribute('aria-expanded', isOpen);
       navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
     });
-
     // Close mobile nav on link click
     navMobile.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
@@ -1347,18 +1167,37 @@ a:hover {
         navToggle.setAttribute('aria-label', 'Open menu');
       });
     });
-
-    // Form submission handler
-    function handleSubmit(e) {
+    // Form submission handler — posts to FormSubmit (AJAX) so enquiries land in your inbox
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const form = document.getElementById('contact-form');
-      const success = document.getElementById('form-success');
-      form.querySelector('button[type="submit"]').style.display = 'none';
-      success.classList.add('show');
-      // In production, replace with actual form backend (e.g., Formspree, Netlify Forms)
-      return false;
-    }
-
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalLabel = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      formStatus.className = 'form-status';
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(contactForm)
+        });
+        if (response.ok) {
+          contactForm.reset();
+          formStatus.textContent = "Application received. I'll review your details and be in touch within 24 hours.";
+          formStatus.classList.add('success', 'show');
+          submitBtn.style.display = 'none';
+        } else {
+          throw new Error('Request failed');
+        }
+      } catch (err) {
+        formStatus.textContent = 'Something went wrong. Please email me directly or try again in a moment.';
+        formStatus.classList.add('error', 'show');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
+    });
     // Scroll reveal fallback for browsers without scroll-driven animations
     if (!CSS.supports || !CSS.supports('animation-timeline', 'scroll()')) {
       const observer = new IntersectionObserver((entries) => {
@@ -1369,14 +1208,11 @@ a:hover {
           }
         });
       }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
       document.querySelectorAll('.fade-in-js').forEach(el => observer.observe(el));
     }
-
     // Smooth active state for nav links on scroll
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-desktop a');
-
     window.addEventListener('scroll', () => {
       let current = '';
       sections.forEach(section => {
@@ -1393,6 +1229,5 @@ a:hover {
       });
     }, { passive: true });
   </script>
-
 </body>
 </html>
