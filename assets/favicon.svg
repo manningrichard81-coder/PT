@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="Iron Protocol">
+  <rect width="32" height="32" rx="6" fill="#0f0f0f"/>
+  <g fill="#c8923a">
+    <rect x="5" y="6" width="22" height="3" rx="1"/>
+    <rect x="13" y="6" width="6" height="20" rx="1"/>
+    <rect x="5" y="23" width="22" height="3" rx="1"/>
+  </g>
+</svg>
