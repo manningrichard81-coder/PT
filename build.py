@@ -25,6 +25,7 @@ ROOT = pathlib.Path(__file__).parent
 POSTS = ROOT / "posts"
 OUT = ROOT / "p"
 SITE_TITLE = "Iron Protocol"
+MANTRA = "I'm calm. I'm capable. I'm strong."
 SITE_TAG = "Looking after myself for the people who love me. Learning to love myself on the way."
 
 
@@ -63,22 +64,15 @@ def page(title, body, depth):
 <meta name="robots" content="noindex, nofollow">
 <meta name="referrer" content="no-referrer">
 <title>{t}</title>
-<script>try{{if(localStorage.getItem("theme")==="light")document.documentElement.dataset.theme="light"}}catch(e){{}}</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%23b4532a'/></svg>">
 <link rel="stylesheet" href="{up}style.css">
 </head>
 <body>
-<header class="site"><a href="{up}index.html" class="brand">{SITE_TITLE}</a><button class="theme" type="button" aria-label="Toggle light and dark">Light</button></header>
+<header class="site"><a href="{up}index.html" class="brand">{SITE_TITLE}</a></header>
 <main>
 {body}
 </main>
 <footer class="site">Written anonymously.</footer>
-<script>
-(function(){{var r=document.documentElement,b=document.querySelector(".theme");
-function s(){{b.textContent=r.dataset.theme==="light"?"Dark":"Light"}}s();
-b.onclick=function(){{if(r.dataset.theme==="light")delete r.dataset.theme;else r.dataset.theme="light";
-try{{localStorage.setItem("theme",r.dataset.theme||"dark")}}catch(e){{}}s()}}}})();
-</script>
 </body>
 </html>
 """
@@ -129,7 +123,12 @@ def build():
         items.append("</ol>")
     if not posts:
         items.append('<p class="empty">Day one starts soon.</p>')
-    home = f'<section class="intro"><h1>{SITE_TITLE}</h1><p>{SITE_TAG}</p></section>\n' + "\n".join(items)
+    hero = (
+        '<section class="hero"><img src="img/hero.jpg" srcset="img/hero-900.jpg 900w, img/hero.jpg 1600w" '
+        'sizes="100vw" alt="Silhouette doing a pull-up on a beach at sunset">'
+        f'<div class="hero-text"><h1>{SITE_TITLE}</h1><p class="mantra">{MANTRA}</p></div></section>'
+    )
+    home = hero + f'<section class="intro"><p>{SITE_TAG}</p></section>\n' + "\n".join(items)
     (ROOT / "index.html").write_text(page(SITE_TITLE, home, 0), encoding="utf-8")
     (ROOT / "404.html").write_text(page("Not found", '<section class="intro"><h1>Not here.</h1><p><a href="/">Back to the log</a></p></section>', 0).replace('href="style.css"', 'href="/style.css"').replace('href="index.html"', 'href="/"'), encoding="utf-8")
     print(f"Built {len(posts)} post(s).")
