@@ -43,6 +43,11 @@ def parse(path):
     meta["date"] = dt.date.fromisoformat(meta["date"])
     meta.setdefault("type", "daily")
     meta.setdefault("summary", "")
+    meta.setdefault("tagline", "")
+    meta["stats"] = [
+        tuple(x.strip() for x in s.split("=", 1))
+        for s in meta.get("stats", "").split("|") if "=" in s
+    ]
     meta["slug"] = path.stem
     meta["body"] = markdown.markdown(
         m.group(2), extensions=["tables", "sane_lists", "smarty"]
@@ -97,10 +102,16 @@ def build():
         nav += f'<a href="../{older["slug"]}/index.html">← {html.escape(older["title"])}</a>' if older else "<span></span>"
         nav += f'<a href="../{newer["slug"]}/index.html">{html.escape(newer["title"])} →</a>' if newer else "<span></span>"
         nav += "</nav>"
+        tag = f'<p class="tagline">{html.escape(p["tagline"])}</p>' if p["tagline"] else ""
+        stats = ""
+        if p["stats"]:
+            stats = '<dl class="stats">' + "".join(
+                f'<div><dt>{html.escape(k)}</dt><dd>{html.escape(v)}</dd></div>' for k, v in p["stats"]
+            ) + "</dl>"
         body = f"""<article class="post {p['type']}">
 <p class="meta">{label(p['type'])}<time datetime="{p['date']}">{nice_date(p['date'])}</time></p>
 <h1>{html.escape(p['title'])}</h1>
-<div class="prose">{p['body']}</div>
+{tag}{stats}<div class="prose">{p['body']}</div>
 </article>
 {nav}"""
         d = OUT / p["slug"]
@@ -115,7 +126,8 @@ def build():
                 items.append("</ol>")
             items.append(f'<h2 class="month">{m}</h2><ol class="list">')
             month = m
-        summ = f'<p class="summary">{html.escape(p["summary"])}</p>' if p["summary"] else ""
+        line = p["tagline"] or p["summary"]
+        summ = f'<p class="summary">{html.escape(line)}</p>' if line else ""
         items.append(
             f'<li class="{p["type"]}"><a href="p/{p["slug"]}/index.html">'
             f'<p class="meta">{label(p["type"])}<time datetime="{p["date"]}">{nice_date(p["date"])}</time></p>'
