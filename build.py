@@ -26,7 +26,8 @@ ROOT = pathlib.Path(__file__).parent
 POSTS = ROOT / "posts"
 OUT = ROOT / "p"
 SITE_TITLE = "Iron Protocol"
-MANTRA = "I'm calm. I'm capable. I'm strong."
+QUOTE = "I can accept failure, everyone fails at something. But I can\u2019t accept not trying."
+QUOTE_BY = "Michael Jordan"
 SITE_TAG = "Looking after myself for the people who love me. Learning to love myself on the way."
 
 
@@ -139,8 +140,8 @@ def build():
         items.append('<p class="empty">Day one starts soon.</p>')
     hero = (
         '<section class="hero"><img src="img/hero.jpg" srcset="img/hero-900.jpg 900w, img/hero.jpg 1600w" '
-        'sizes="(max-width: 680px) 100vw, 680px" width="1600" height="893" style="max-width:100%;height:auto" alt="Silhouette doing a pull-up on a beach at sunset">'
-        f'<div class="hero-text"><h1>{SITE_TITLE}</h1><p class="mantra">{MANTRA}</p></div></section>'
+        'sizes="(max-width: 680px) 100vw, 680px" width="1600" height="893" alt="Silhouette doing a pull-up on a beach at sunset">'
+        f'<div class="hero-text"><h1>{SITE_TITLE}</h1><blockquote class="mantra"><p>\u201c{QUOTE}\u201d</p><cite>{QUOTE_BY}</cite></blockquote></div></section>'
     )
     home = hero + f'<section class="intro"><p>{SITE_TAG}</p></section>\n' + "\n".join(items)
     (ROOT / "index.html").write_text(page(SITE_TITLE, home, 0), encoding="utf-8")

@@ -27,7 +27,10 @@ footer.site { margin-top: 4rem; padding-top: 1rem; padding-bottom: 2.5rem; borde
 .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,10,10,0) 35%, rgba(10,10,10,.55) 65%, var(--bg) 100%); }
 .hero-text { position: absolute; left: 1.25rem; right: 1.25rem; bottom: 1.25rem; z-index: 1; }
 .hero-text h1 { font-size: 2.8rem; line-height: 1.05; margin: 0 0 0.6rem; letter-spacing: -0.01em; }
-.mantra { margin: 0; font: 600 0.8rem/1.4 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); }
+.mantra { margin: 0; max-width: 32rem; }
+.mantra p { margin: 0; font-style: italic; font-size: 1.15rem; line-height: 1.4; }
+.mantra cite { display: block; margin-top: 0.4rem; font: 600 0.7rem/1 var(--mono); font-style: normal; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+.mantra cite::before { content: "\2014  "; }
 .intro { padding: 1.25rem 0 1rem; }
 .intro h1 { font-size: 2.6rem; line-height: 1.1; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
 .intro p { color: var(--muted); margin: 0; font-size: 1.15rem; line-height: 1.5; max-width: 30rem; }
@@ -76,6 +79,6 @@ footer.site { margin-top: 4rem; padding-top: 1rem; padding-bottom: 2.5rem; borde
   .hero { aspect-ratio: 4 / 5; }
   .hero img { object-position: 62% 40%; }
   .hero-text h1 { font-size: 2.2rem; }
-  .mantra { font-size: 0.7rem; }
+  .mantra p { font-size: 1rem; }
   .post h1 { font-size: 1.75rem; }
 }
