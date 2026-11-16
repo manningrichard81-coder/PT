@@ -1,0 +1,66 @@
+:root {
+  --bg: #f6f3ee;
+  --ink: #1d1b18;
+  --muted: #6f6a62;
+  --rule: #ddd6cb;
+  --accent: #b4532a;
+  --card: #fffdf9;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #151412; --ink: #ebe6de; --muted: #9a948a; --rule: #2e2b27; --accent: #e07a4c; --card: #1c1a17; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.65 var(--serif); }
+main, header.site, footer.site { max-width: 40rem; margin: 0 auto; padding: 0 1.25rem; }
+a { color: inherit; }
+header.site { padding-top: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); }
+.brand { font: 600 0.8rem/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; }
+.brand::before { content: ""; display: inline-block; width: 0.6em; height: 0.6em; background: var(--accent); margin-right: 0.55em; border-radius: 2px; }
+footer.site { margin-top: 4rem; padding-top: 1rem; padding-bottom: 2.5rem; border-top: 1px solid var(--rule); color: var(--muted); font: 0.8rem var(--mono); }
+
+.intro { padding: 3rem 0 1rem; }
+.intro h1 { font-size: 2.6rem; line-height: 1.1; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+.intro p { color: var(--muted); margin: 0; }
+.empty { color: var(--muted); font-style: italic; margin-top: 2rem; }
+
+.month { font: 600 0.75rem var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 2.5rem 0 0.5rem; }
+.list { list-style: none; margin: 0; padding: 0; }
+.list li a { display: block; text-decoration: none; padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+.list li a:hover h3 { color: var(--accent); }
+.list h3 { margin: 0.2rem 0 0; font-size: 1.25rem; line-height: 1.3; transition: color .15s; }
+.list .summary { margin: 0.25rem 0 0; color: var(--muted); font-size: 1rem; }
+.list li.weekly a { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 1rem 1.1rem; margin: 0.75rem 0; }
+
+.meta { margin: 0; font: 0.75rem var(--mono); color: var(--muted); display: flex; gap: 0.75rem; align-items: center; }
+.kind { text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 600; }
+.kind.weekly { background: var(--accent); color: var(--bg); padding: 0.1rem 0.45rem; border-radius: 3px; }
+
+.post { padding-top: 2.5rem; }
+.post h1 { font-size: 2.1rem; line-height: 1.15; margin: 0.6rem 0 1.5rem; letter-spacing: -0.01em; }
+.prose h2 { font: 600 0.8rem var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 2.2rem 0 0.5rem; }
+.prose h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; }
+.prose p, .prose ul, .prose ol { margin: 0 0 1rem; }
+.prose li { margin: 0.2rem 0; }
+.prose blockquote { margin: 1.5rem 0; padding: 0.2rem 0 0.2rem 1rem; border-left: 3px solid var(--accent); color: var(--muted); font-style: italic; }
+.prose blockquote p:last-child { margin-bottom: 0; }
+.prose strong { font-weight: 600; }
+.prose hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+.prose table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font: 0.85rem/1.4 var(--sans); font-variant-numeric: tabular-nums; }
+.prose th { text-align: left; font-weight: 600; color: var(--muted); border-bottom: 2px solid var(--rule); padding: 0.45rem 0.6rem 0.45rem 0; }
+.prose td { border-bottom: 1px solid var(--rule); padding: 0.45rem 0.6rem 0.45rem 0; }
+.prose code { font: 0.85em var(--mono); background: var(--card); padding: 0.1em 0.3em; border-radius: 3px; }
+
+.pager { display: flex; justify-content: space-between; gap: 1rem; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); font: 0.8rem/1.4 var(--mono); }
+.pager a { text-decoration: none; color: var(--muted); max-width: 48%; }
+.pager a:last-child { text-align: right; }
+.pager a:hover { color: var(--accent); }
+
+@media (max-width: 520px) {
+  body { font-size: 17px; }
+  .intro h1 { font-size: 2.1rem; }
+  .post h1 { font-size: 1.75rem; }
+}
