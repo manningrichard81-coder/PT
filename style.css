@@ -11,6 +11,7 @@ html {
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
+img { max-width: 100%; height: auto; }
 html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.65 var(--serif); }
 main, header.site, footer.site { max-width: 40rem; margin: 0 auto; padding: 0 1.25rem; }

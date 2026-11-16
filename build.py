@@ -14,6 +14,7 @@ Post format (front matter between --- lines, then Markdown):
 Run:  python3 build.py
 """
 import datetime as dt
+import hashlib
 import html
 import pathlib
 import re
@@ -55,6 +56,7 @@ def nice_date(d):
 
 def page(title, body, depth):
     up = "../" * depth
+    ver = hashlib.md5((ROOT / "style.css").read_bytes()).hexdigest()[:8]
     t = html.escape(title)
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -65,7 +67,7 @@ def page(title, body, depth):
 <meta name="referrer" content="no-referrer">
 <title>{t}</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%23b4532a'/></svg>">
-<link rel="stylesheet" href="{up}style.css">
+<link rel="stylesheet" href="{up}style.css?v={ver}">
 </head>
 <body>
 <header class="site"><a href="{up}index.html" class="brand">{SITE_TITLE}</a></header>
@@ -125,12 +127,12 @@ def build():
         items.append('<p class="empty">Day one starts soon.</p>')
     hero = (
         '<section class="hero"><img src="img/hero.jpg" srcset="img/hero-900.jpg 900w, img/hero.jpg 1600w" '
-        'sizes="100vw" alt="Silhouette doing a pull-up on a beach at sunset">'
+        'sizes="(max-width: 680px) 100vw, 680px" width="1600" height="893" style="max-width:100%;height:auto" alt="Silhouette doing a pull-up on a beach at sunset">'
         f'<div class="hero-text"><h1>{SITE_TITLE}</h1><p class="mantra">{MANTRA}</p></div></section>'
     )
     home = hero + f'<section class="intro"><p>{SITE_TAG}</p></section>\n' + "\n".join(items)
     (ROOT / "index.html").write_text(page(SITE_TITLE, home, 0), encoding="utf-8")
-    (ROOT / "404.html").write_text(page("Not found", '<section class="intro"><h1>Not here.</h1><p><a href="/">Back to the log</a></p></section>', 0).replace('href="style.css"', 'href="/style.css"').replace('href="index.html"', 'href="/"'), encoding="utf-8")
+    (ROOT / "404.html").write_text(page("Not found", '<section class="intro"><h1>Not here.</h1><p><a href="/">Back to the log</a></p></section>', 0).replace('href="style.css', 'href="/style.css').replace('href="index.html"', 'href="/"'), encoding="utf-8")
     print(f"Built {len(posts)} post(s).")
 
 
