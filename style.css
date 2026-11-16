@@ -1,30 +1,34 @@
-:root {
-  --bg: #f6f3ee;
-  --ink: #1d1b18;
-  --muted: #6f6a62;
-  --rule: #ddd6cb;
-  --accent: #b4532a;
-  --card: #fffdf9;
+html {
+  --bg: #0a0a0a;
+  --ink: #ece8e1;
+  --muted: #8f8a82;
+  --rule: #262422;
+  --accent: #e07a4c;
+  --card: #141312;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: dark;
 }
-@media (prefers-color-scheme: dark) {
-  :root { --bg: #151412; --ink: #ebe6de; --muted: #9a948a; --rule: #2e2b27; --accent: #e07a4c; --card: #1c1a17; }
+html[data-theme="light"] {
+  --bg: #f6f3ee; --ink: #1d1b18; --muted: #6f6a62; --rule: #ddd6cb; --accent: #b4532a; --card: #fffdf9;
+  color-scheme: light;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.65 var(--serif); }
 main, header.site, footer.site { max-width: 40rem; margin: 0 auto; padding: 0 1.25rem; }
 a { color: inherit; }
-header.site { padding-top: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); }
+header.site { padding-top: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; }
+.theme { background: none; border: 1px solid var(--rule); color: var(--muted); font: 0.7rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 0.6rem; border-radius: 999px; cursor: pointer; }
+.theme:hover { color: var(--ink); border-color: var(--muted); }
 .brand { font: 600 0.8rem/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; }
 .brand::before { content: ""; display: inline-block; width: 0.6em; height: 0.6em; background: var(--accent); margin-right: 0.55em; border-radius: 2px; }
 footer.site { margin-top: 4rem; padding-top: 1rem; padding-bottom: 2.5rem; border-top: 1px solid var(--rule); color: var(--muted); font: 0.8rem var(--mono); }
 
 .intro { padding: 3rem 0 1rem; }
 .intro h1 { font-size: 2.6rem; line-height: 1.1; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
-.intro p { color: var(--muted); margin: 0; }
+.intro p { color: var(--muted); margin: 0; font-size: 1.15rem; line-height: 1.5; max-width: 30rem; }
 .empty { color: var(--muted); font-style: italic; margin-top: 2rem; }
 
 .month { font: 600 0.75rem var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 2.5rem 0 0.5rem; }

@@ -25,7 +25,7 @@ ROOT = pathlib.Path(__file__).parent
 POSTS = ROOT / "posts"
 OUT = ROOT / "p"
 SITE_TITLE = "Iron Protocol"
-SITE_TAG = "A daily log of training, health and headspace."
+SITE_TAG = "Looking after myself for the people who love me. Learning to love myself on the way."
 
 
 def parse(path):
@@ -63,15 +63,22 @@ def page(title, body, depth):
 <meta name="robots" content="noindex, nofollow">
 <meta name="referrer" content="no-referrer">
 <title>{t}</title>
+<script>try{{if(localStorage.getItem("theme")==="light")document.documentElement.dataset.theme="light"}}catch(e){{}}</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%23b4532a'/></svg>">
 <link rel="stylesheet" href="{up}style.css">
 </head>
 <body>
-<header class="site"><a href="{up}index.html" class="brand">{SITE_TITLE}</a></header>
+<header class="site"><a href="{up}index.html" class="brand">{SITE_TITLE}</a><button class="theme" type="button" aria-label="Toggle light and dark">Light</button></header>
 <main>
 {body}
 </main>
 <footer class="site">Written anonymously.</footer>
+<script>
+(function(){{var r=document.documentElement,b=document.querySelector(".theme");
+function s(){{b.textContent=r.dataset.theme==="light"?"Dark":"Light"}}s();
+b.onclick=function(){{if(r.dataset.theme==="light")delete r.dataset.theme;else r.dataset.theme="light";
+try{{localStorage.setItem("theme",r.dataset.theme||"dark")}}catch(e){{}}s()}}}})();
+</script>
 </body>
 </html>
 """
